@@ -13,6 +13,7 @@ func TestDuration(t *testing.T) {
 	}{
 		{Value: 0, Expected: "0s"},
 		{Value: 1023, Expected: "1.023µs"},
+		{Value: 29*time.Minute + 59*time.Second + 963*time.Millisecond, Expected: "29m59s"},
 		{Value: 67*time.Minute + 18*time.Second, Expected: "1h7m"},
 		{Value: 13*time.Hour + 58*time.Minute + 54*time.Second, Expected: "13h58m"},
 		{Value: 58*time.Hour + 12*time.Minute, Expected: "2 days 10 hours"},

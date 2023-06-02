@@ -36,6 +36,10 @@ func (d Duration) String() string {
 	case dur > time.Hour:
 		dur = dur.Truncate(time.Minute)
 		return formatDuration(dur, time.Hour, time.Minute, "h", "m")
+	case dur > time.Minute:
+		return fmt.Sprintf("%s", dur.Truncate(time.Second))
+	case dur > time.Second:
+		return fmt.Sprintf("%s", dur.Truncate(time.Millisecond))
 	default:
 		return fmt.Sprintf("%s", dur)
 	}
