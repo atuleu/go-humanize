@@ -14,6 +14,7 @@ type ByteSize int64
 
 var iecPrefixes = []string{"", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei"}
 
+// String implement the fmt.Stringer interface
 func (s ByteSize) String() string {
 	value := float64(s)
 	prefix := ""

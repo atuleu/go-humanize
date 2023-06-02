@@ -29,3 +29,8 @@ func TestBytesFormatting(t *testing.T) {
 		}
 	}
 }
+
+func ExampleByteSize() {
+	fmt.Printf("%s\n", ByteSize(123456))
+	// Output: 120.6 KiB
+}
